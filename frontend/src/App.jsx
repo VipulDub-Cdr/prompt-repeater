@@ -21,7 +21,7 @@ function App() {
 
   async function getResponse() {
     let p = p1 ? prompt1 : p2 ? prompt2 : prompt3;
-    let response = await fetch("https://pr-backend-mu.vercel.app/api/v1", {
+    let response = await fetch("https://prbackend-tan.vercel.app/api/v1", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
