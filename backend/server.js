@@ -9,12 +9,11 @@ const {userAuth} = require("./middleware.js")
 
 app.use(express.json());
 app.use(cors());
-app.use(userAuth);
 
 const genAI = new GoogleGenerativeAI(process.env.API_KEY);
 const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
 
-app.post("/api/v1",async (req,res)=>{
+app.post("/api/v1",userAuth, async (req,res)=>{
     const {prompt, solution} = req.body;
     const result = await model.generateContent(prompt + "\n\n" + solution);
     res.send({
