@@ -1,0 +1,24 @@
+@import "tailwindcss";
+/* For Chrome, Edge, Safari */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000;     /* black track */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #222;     /* dark thumb */
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #333;
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #222 #000;  /* thumb | track */
+}
