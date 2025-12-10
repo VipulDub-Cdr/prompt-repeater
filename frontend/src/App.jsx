@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import viteLogo from '/vite.svg'
 import { Copy, CopyCheck } from "lucide-react";
-
+import {gsap} from "gsap"; 
 function App() {
 
   const [resul1load, setresul1load] = useState(false);
